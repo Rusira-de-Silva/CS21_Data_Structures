@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
   
 // function to heapify the tree
@@ -54,8 +55,23 @@ void displayArray(int arr[], int n)
 // main program
 int main()
 {
-   int heap_arr[] = {84,11,4,13,1,99,25,47,7,69};
-   int n = sizeof(heap_arr)/sizeof(heap_arr[0]);
+   vector <int> vct;
+   cout << "Enter numbers one by one ...." << endl;
+   cout << "Enter -1 to stop" << endl;
+   string s = "";
+   while (true){
+      cin >> s;
+      if (s == "-1"){
+         break;
+      }
+      vct.push_back(stoi(s));
+   }
+   int n = vct.size();
+   int heap_arr[n];
+   for (int x = 0; x < n; x++){
+      heap_arr[x] = vct[x];
+   }
+   
    cout<<"Input array"<<endl;
    displayArray(heap_arr,n);
   
