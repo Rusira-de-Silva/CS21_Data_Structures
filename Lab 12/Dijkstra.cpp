@@ -58,7 +58,7 @@ void printAverage(int graph[6][6], int dist[]){
         totalTime = 0;
         dijkstra(graph, city, dist);
         for (int i = 0; i < 6; i++)  totalTime += dist[i];
-        avg = totalTime / 6.0;
+        avg = totalTime / 5.0;
         cout << "From city - " << city << "\taverage time -> " << avg << endl;
     }
 
