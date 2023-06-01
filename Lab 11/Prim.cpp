@@ -56,6 +56,7 @@ int main()
     {1,0,5,0,4,0}
     };
 
+    // We can set source here
     int source = 0;
     prim(source, graph, parent);
 
